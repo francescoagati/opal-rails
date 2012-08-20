@@ -27,6 +27,9 @@ module Opal
   end
 end
 
+
+Tilt.register              'rb', Opal::Rails::Processor
+Sprockets.register_engine '.rb', Opal::Rails::Processor
 Tilt.register              'opal', Opal::Rails::Processor
 Sprockets.register_engine '.opal', Opal::Rails::Processor
 
